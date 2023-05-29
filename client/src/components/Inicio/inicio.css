@@ -1,0 +1,27 @@
+.salute {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.salute h1 {
+  font-family: 'Grand Hotel', cursive;
+  font-weight: 100;
+  color: #FFFFFF;
+  font-size: 100px;
+}

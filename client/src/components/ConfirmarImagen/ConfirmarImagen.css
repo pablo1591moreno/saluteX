@@ -1,0 +1,104 @@
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.videoContenedor {
+  position: relative;
+  width: 90%;
+  height: 70%;
+}
+
+video,
+.ImagenTomada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+
+.camara {
+  position: absolute;
+  left: 43%;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.camara img {
+  width: 47px;
+}
+
+.rotar {
+  position: absolute;
+  bottom: 25px;
+  left: 75%;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.deNuevo{
+  display: flex;
+  justify-content: center;
+}
+
+.tomarDeNuevo {
+  bottom: 25px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 0 10px;
+  position: absolute;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+  color: #F28907;
+}
+
+.texto{
+text-align: center;
+}
+
+.sinBebida{
+  font-size: 24px;
+  margin: 0;
+}
+
+.noDetect{
+  font-size: 18px;
+  margin: 0;
+}
+
+.continuarOTomar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 25px;
+  gap: 20px;
+}
+
+.continuarOTomar button{
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 0 20px;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+  color: #F28907;
+}
