@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+const functions = require("firebase-functions");
+const {Server} = require("socket.io");
+
+const io = new Server();
+
+io.on("connection", (socket) => {
+  console.log("Se conectó un cliente");
+
+  socket.on("chat_message", (data) => {
+    io.emit("chat_message", data);
+  });
+});
+
+exports.socketServer = functions.https.onRequest((request, response) => {
+  if (!request.path) {
+    request.url = `/${request.url}`;
+  }
+  return io(request, response);
+});

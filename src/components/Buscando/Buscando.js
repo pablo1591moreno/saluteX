@@ -3,7 +3,7 @@ import DatosContext from '../Context/MyContext';
 import {io} from 'socket.io-client';
 import './Buscando.css'
 
-const socket = io('http://localhost:4000');
+const socket = io('https://us-central1-salute-yaa.cloudfunctions.net/socketServer');
 
 function Buscando() {
   const { datosCompartidos } = useContext(DatosContext);
